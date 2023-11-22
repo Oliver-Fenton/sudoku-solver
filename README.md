@@ -24,4 +24,4 @@ python app.py
 - **Retrieving the Solution**: After processing, the app will display the solution. You have the option to download this solved puzzle image.
 
 ## Credits
-Special thanks to Adrian Rosebrock for the insightful article on [OpenCV Sudoku Solver and OCR](https://pyimagesearch.com/2020/08/10/opencv-sudoku-solver-and-ocr/). The image preprocessing steps in this application were inspired and guided by the techniques covered in their article.
+Special thanks to Adrian Rosebrock for the insightful article, [OpenCV Sudoku Solver and OCR](https://pyimagesearch.com/2020/08/10/opencv-sudoku-solver-and-ocr/). The image preprocessing steps in this application were inspired and guided by the techniques covered in their article.
