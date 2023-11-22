@@ -1,0 +1,4 @@
+# Ignore files ending with _solution in the test-puzzles directory
+test-puzzles/*_solution.*
+# Ignore files in the /static/solutions/ directory
+static/solutions/

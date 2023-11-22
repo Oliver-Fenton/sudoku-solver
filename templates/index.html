@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <!-- Include the CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content d-flex flex-column align-items-center">
+        <h1>Sudoku Solver</h1>
+        <!-- Form for uploading Sudoku puzzle -->
+        <form action="/" method="post" enctype="multipart/form-data" class="my-2" id="uploadForm">
+            <div id="dropZone">
+                Drag & Drop or Click to Upload
+                <!-- Input field for file selection (hidden) -->
+                <input type="file" name="file" id="fileInput" class="my-2" style="display:none;">
+            </div>
+        </form>
+
+        <!-- Display Sudoku solution if available -->
+        {% if solution_filename %}
+            <div class="imgbox my-2">
+                <!-- Display the Sudoku solution image -->
+                <img class="center-fit" src="{{ url_for('static', filename='solutions/' + solution_filename) }}" alt="Sudoku Solution">
+            </div>
+            <!-- Button to download the solution -->
+            <button onclick="downloadSolution('{{ url_for('download', filename=solution_filename) }}')" class="btn btn-download my-2">Download Solution</button>
+        {% endif %}
+    </div>
+    <!-- Include JavaScript file for client-side scripting -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
