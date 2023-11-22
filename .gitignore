@@ -2,3 +2,5 @@
 test-puzzles/*_solution.*
 # Ignore files in the /static/solutions/ directory
 static/solutions/
+# Ignore test-puzzles directory
+test-puzzles/
